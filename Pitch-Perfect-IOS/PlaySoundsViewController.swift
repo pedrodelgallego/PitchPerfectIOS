@@ -10,6 +10,24 @@ import UIKit
 
 class PlaySoundsViewController: UIViewController {
     var recordedAudio: RecordedAudio!
-
     
+    @IBAction func playSoundFast(sender: UIButton) {
+        println("play sound at 2.0 rate")
+    }
+    
+    @IBAction func playSoundSlow(sender: UIButton) {
+        println("play sound at 0.5 rate")
+    }
+    
+    @IBAction func playSoundChipmunk(sender: UIButton) {
+        println("play sound pitch +1000")
+    }
+    
+    @IBAction func playSoundDarthVader(sender: UIButton) {
+        println("play sound pitch -1000")
+    }
+    
+    @IBAction func stopPlayingAudio(sender: UIButton) {
+        println("stop playing sound")
+    }
 }
