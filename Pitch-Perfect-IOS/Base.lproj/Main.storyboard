@@ -22,28 +22,42 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xsg-1Q-cM3">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="13"/>
+                                <color key="textColor" red="0.062745101749897003" green="0.30588236451148987" blue="0.54509806632995605" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Xsg-1Q-cM3" secondAttribute="centerX" id="85J-p5-L3S"/>
+                            <constraint firstItem="Xsg-1Q-cM3" firstAttribute="top" secondItem="fJF-JK-gYB" secondAttribute="bottom" constant="18" id="f2E-fc-0Yo"/>
                             <constraint firstAttribute="centerX" secondItem="fJF-JK-gYB" secondAttribute="centerX" id="i1l-fO-mrH"/>
                             <constraint firstAttribute="centerY" secondItem="fJF-JK-gYB" secondAttribute="centerY" id="lh4-nE-b9x"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="fJF-JK-gYB"/>
+                                <exclude reference="Xsg-1Q-cM3"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="i1l-fO-mrH"/>
                                 <exclude reference="lh4-nE-b9x"/>
+                                <exclude reference="85J-p5-L3S"/>
+                                <exclude reference="f2E-fc-0Yo"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="fJF-JK-gYB"/>
+                                <include reference="Xsg-1Q-cM3"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="i1l-fO-mrH"/>
                                 <include reference="lh4-nE-b9x"/>
+                                <include reference="85J-p5-L3S"/>
+                                <include reference="f2E-fc-0Yo"/>
                             </mask>
                         </variation>
                     </view>
