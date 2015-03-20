@@ -41,7 +41,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.7764706015586853" green="0.88627451658248901" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="Xsg-1Q-cM3" secondAttribute="centerX" id="85J-p5-L3S"/>
                             <constraint firstAttribute="centerX" secondItem="Ayo-iN-xDE" secondAttribute="centerX" constant="-2" id="8rd-JX-VqT"/>
@@ -85,11 +85,30 @@
                         <outlet property="recordingLabel" destination="Xsg-1Q-cM3" id="Gph-0e-KUo"/>
                         <outlet property="startRecordingButton" destination="fJF-JK-gYB" id="hSE-0V-4eX"/>
                         <outlet property="stopRecordingButton" destination="Ayo-iN-xDE" id="BRh-Dj-Pnb"/>
+                        <segue destination="I27-o2-SZl" kind="show" identifier="stopRecording" id="8zn-Qz-DVi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="570" y="295"/>
+        </scene>
+        <!--Play Sounds View Controller-->
+        <scene sceneID="QFh-gD-4NZ">
+            <objects>
+                <viewController id="I27-o2-SZl" customClass="PlaySoundsViewController" customModule="Controllers_test" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5rg-Of-o5r"/>
+                        <viewControllerLayoutGuide type="bottom" id="3RX-zG-OVy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cQc-Cw-L5t">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.7764706015586853" green="0.88627451658248901" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GSw-K9-KfY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Om4-qM-nmw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1515" y="295"/>
         </scene>
     </scenes>
     <resources>

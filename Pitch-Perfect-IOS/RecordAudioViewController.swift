@@ -11,11 +11,10 @@ import AVFoundation
 
 class RecordAudioViewController: UIViewController, AVAudioRecorderDelegate {
     var audioRecorder: PPAudioRecorder!
+    var recordedAudio: RecordedAudio!
     
     @IBOutlet weak var recordingLabel: UILabel!
-    
     @IBOutlet weak var startRecordingButton: UIButton!
-
     @IBOutlet weak var stopRecordingButton: UIButton!
 
     override func viewDidLoad() { super.viewDidLoad() }
@@ -51,5 +50,24 @@ class RecordAudioViewController: UIViewController, AVAudioRecorderDelegate {
         audioRecorder.stop()
         var audioSession = AVAudioSession.sharedInstance()
         audioSession.setActive(false, error: nil)
+    }
+    
+    func audioRecorderDidFinishRecording(recorder: AVAudioRecorder!, successfully flag: Bool) {
+        if (flag){
+            recordedAudio = RecordedAudio(title: recorder.url.lastPathComponent!, filePathUrl: recorder.url)
+            self.performSegueWithIdentifier("stopRecording", sender: recordedAudio)
+        } else {
+            println("Recording was not succesful")
+            startRecordingButton.enabled = true
+            stopRecordingButton.hidden = true
+        }
+    }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "stopRecording"){
+            let playSoundsViewController:PlaySoundsViewController = segue.destinationViewController as! PlaySoundsViewController
+
+            playSoundsViewController.recordedAudio = sender as! RecordedAudio
+        }
     }
 }
