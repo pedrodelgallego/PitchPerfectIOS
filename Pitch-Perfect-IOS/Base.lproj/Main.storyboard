@@ -96,7 +96,7 @@
         <!--Play Sounds View Controller-->
         <scene sceneID="QFh-gD-4NZ">
             <objects>
-                <viewController id="I27-o2-SZl" customClass="PlaySoundsViewController" customModule="Controllers_test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlaySoundsVC" id="I27-o2-SZl" customClass="PlaySoundsViewController" customModule="Controllers_test" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5rg-Of-o5r"/>
                         <viewControllerLayoutGuide type="bottom" id="3RX-zG-OVy"/>

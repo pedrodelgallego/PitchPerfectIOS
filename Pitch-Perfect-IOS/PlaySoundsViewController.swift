@@ -10,6 +10,12 @@ import UIKit
 
 class PlaySoundsViewController: UIViewController {
     var recordedAudio: RecordedAudio!
+    var audioEngine: PPAudioEngine!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        audioEngine = PPAudioEngine(recordedAudio: recordedAudio)
+    }
     
     @IBAction func playSoundFast(sender: UIButton) {
         println("play sound at 2.0 rate")
