@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import AVFoundation
 
-class RecordAudioViewController: UIViewController {
-
+class RecordAudioViewController: UIViewController, AVAudioRecorderDelegate {
+    var audioRecorder: PPAudioRecorder!
+    
     @IBOutlet weak var recordingLabel: UILabel!
     
     @IBOutlet weak var startRecordingButton: UIButton!
@@ -28,14 +30,26 @@ class RecordAudioViewController: UIViewController {
         recordingLabel.hidden = false
         stopRecordingButton.hidden = false
         startRecordingButton.enabled = false
+        startRecording()
     }
     
+    func startRecording() {
+        audioRecorder = PPAudioRecorder()
+        audioRecorder.delegate = self
+        
+        var session = AVAudioSession.sharedInstance()
+        session.setCategory(AVAudioSessionCategoryPlayAndRecord, error: nil)
+
+        audioRecorder.record()
+    }
     
     @IBAction func stopRecordingAudio(sender: UIButton) {
         recordingLabel.hidden = true
         stopRecordingButton.hidden = true
         startRecordingButton.enabled = true
+    
+        audioRecorder.stop()
+        var audioSession = AVAudioSession.sharedInstance()
+        audioSession.setActive(false, error: nil)
     }
-
 }
-

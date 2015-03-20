@@ -41,6 +41,5 @@ class RecordSoundViewControllerTest: XCTestCase {
         XCTAssertEqual(vc.stopRecordingButton.hidden, true, "The stop recording button should be hidden")
         XCTAssertEqual(vc.recordingLabel.hidden, true, "The recording label should be hidden")
         XCTAssertEqual(vc.startRecordingButton.enabled, true, "The recording button should be enabled")
-        
     }
 }

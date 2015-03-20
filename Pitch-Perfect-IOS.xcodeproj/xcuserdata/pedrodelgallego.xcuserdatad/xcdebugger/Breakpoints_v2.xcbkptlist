@@ -10,11 +10,29 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pitch-Perfect-IOS/RecordAudioViewController.swift"
-            timestampString = "448550092.977691"
+            timestampString = "448557338.208194"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50">
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "RecordAudioViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pitch-Perfect-IOSTests/PPAudioRecorderTest.swift"
+            timestampString = "448557338.208194"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "testStartRecordingAudioUseAnAudioVideo()"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

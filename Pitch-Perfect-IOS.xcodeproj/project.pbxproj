@@ -18,6 +18,11 @@
 		D4C9BF811ABC53B8001B2786 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D42064E11ABC39E0004FEE70 /* Main.storyboard */; };
 		D4C9BF821ABC53BB001B2786 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D42064E41ABC39E0004FEE70 /* Images.xcassets */; };
 		D4C9BF831ABC53BF001B2786 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D42064E61ABC39E1004FEE70 /* LaunchScreen.xib */; };
+		D4C9BF871ABC58DC001B2786 /* PPAudioRecorderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C9BF861ABC58DC001B2786 /* PPAudioRecorderTest.swift */; };
+		D4C9BF891ABC592B001B2786 /* PPAudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C9BF881ABC592B001B2786 /* PPAudioRecorder.swift */; };
+		D4C9BF8A1ABC592B001B2786 /* PPAudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C9BF881ABC592B001B2786 /* PPAudioRecorder.swift */; };
+		D4C9BF8B1ABC592B001B2786 /* PPAudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C9BF881ABC592B001B2786 /* PPAudioRecorder.swift */; };
+		D4C9BF8D1ABC5962001B2786 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C9BF8C1ABC5962001B2786 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +55,9 @@
 		D4C9BF741ABC5393001B2786 /* Controllers test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Controllers test.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C9BF771ABC5393001B2786 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4C9BF781ABC5393001B2786 /* Controllers_test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controllers_test.swift; sourceTree = "<group>"; };
+		D4C9BF861ABC58DC001B2786 /* PPAudioRecorderTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPAudioRecorderTest.swift; sourceTree = "<group>"; };
+		D4C9BF881ABC592B001B2786 /* PPAudioRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPAudioRecorder.swift; sourceTree = "<group>"; };
+		D4C9BF8C1ABC5962001B2786 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4C9BF8D1ABC5962001B2786 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +89,7 @@
 		D42064CF1ABC39E0004FEE70 = {
 			isa = PBXGroup;
 			children = (
+				D4C9BF8C1ABC5962001B2786 /* AVFoundation.framework */,
 				D42064DA1ABC39E0004FEE70 /* Pitch-Perfect-IOS */,
 				D42064F01ABC39E1004FEE70 /* Pitch-Perfect-IOSTests */,
 				D4C9BF751ABC5393001B2786 /* Controllers test */,
@@ -123,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				D42064F11ABC39E1004FEE70 /* Supporting Files */,
+				D4C9BF861ABC58DC001B2786 /* PPAudioRecorderTest.swift */,
 			);
 			path = "Pitch-Perfect-IOSTests";
 			sourceTree = "<group>";
@@ -155,6 +166,7 @@
 		D4C9BF841ABC5802001B2786 /* PPAudioClasses */ = {
 			isa = PBXGroup;
 			children = (
+				D4C9BF881ABC592B001B2786 /* PPAudioRecorder.swift */,
 			);
 			name = PPAudioClasses;
 			sourceTree = "<group>";
@@ -293,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D42064E01ABC39E0004FEE70 /* RecordAudioViewController.swift in Sources */,
+				D4C9BF891ABC592B001B2786 /* PPAudioRecorder.swift in Sources */,
 				D42064DE1ABC39E0004FEE70 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +314,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4C9BF8A1ABC592B001B2786 /* PPAudioRecorder.swift in Sources */,
+				D4C9BF871ABC58DC001B2786 /* PPAudioRecorderTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4C9BF8B1ABC592B001B2786 /* PPAudioRecorder.swift in Sources */,
 				D4C9BF801ABC53B4001B2786 /* RecordAudioViewController.swift in Sources */,
 				D4C9BF7F1ABC53B2001B2786 /* AppDelegate.swift in Sources */,
 				D4C9BF791ABC5393001B2786 /* Controllers_test.swift in Sources */,
@@ -454,6 +470,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -465,6 +482,7 @@
 				INFOPLIST_FILE = "Pitch-Perfect-IOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pitch-Perfect-IOS.app/Pitch-Perfect-IOS";
 			};
 			name = Debug;
@@ -473,6 +491,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
