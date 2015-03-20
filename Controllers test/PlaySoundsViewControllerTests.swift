@@ -24,10 +24,9 @@ class PlaySoundsViewControllerTests: XCTestCase {
         vc.recordedAudio = recordedAudio
         let _ = vc.view
     }
-    
+
     func testItCreatesAnPPAudioEngineWithARecordedAudio(){
         XCTAssertNotNil(vc.audioEngine, "it should have an audioEngine")
         XCTAssertEqual(vc.audioEngine.audioFile.url, recordedAudio.filePathUrl, "the audioEngine should play the file that was paased to the VC")
     }
-
 }

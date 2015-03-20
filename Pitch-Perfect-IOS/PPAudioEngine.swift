@@ -21,9 +21,33 @@ class PPAudioEngine:NSObject {
         audioEngine = AVAudioEngine()
         audioFile = AVAudioFile(forReading: recordedAudio.filePathUrl, error: nil)
     }
+
+    func playAudioWithVariableSpeed(rate: Float){
+        stop()
+        var effect = AVAudioUnitVarispeed()
+        effect.rate = rate
+        playAudioWithEffect(effect)
+    }
     
     func playAudioWithVariablePitch(pitch: Float){
-        println("play audion wiht pitch: ", pitch)
+        stop()
+        var effect = AVAudioUnitTimePitch()
+        effect.pitch = pitch
+        playAudioWithEffect(effect)
+    }
+    
+    func playAudioWithEffect(effect: AVAudioUnitTimeEffect){
+        var audioPlayerNode = AVAudioPlayerNode()
+        audioEngine.attachNode(audioPlayerNode)
+        audioEngine.attachNode(effect)
+        
+        audioEngine.connect(audioPlayerNode, to: effect, format: nil)
+        audioEngine.connect(effect, to: audioEngine.outputNode, format: nil)
+        
+        audioPlayerNode.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
+        audioEngine.startAndReturnError(nil)
+        
+        audioPlayerNode.play()
     }
     
     func stop(){

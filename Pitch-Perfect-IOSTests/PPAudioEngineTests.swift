@@ -32,19 +32,18 @@ class PPAudioEngineTests: XCTestCase {
     
     func testStopShouldCallStopAndResetOnTheAVAudioEngine(){
         class AVAudioEngineMock: AVAudioEngine {
-            var AVAudioEngineResetWasCalled:Bool = false
-            var AVAudioEngineStopWasCalled:Bool = false
+            var resetWasCalled:Bool = false
+            var stopWasCalled:Bool = false
             
-            override func stop()  { AVAudioEngineStopWasCalled = true }
-            override func reset() { AVAudioEngineResetWasCalled = true }
+            override func stop()  { stopWasCalled = true }
+            override func reset() { resetWasCalled = true }
         }
         
         audioEngine = PPAudioEngine()
         audioEngine.audioEngine = AVAudioEngineMock()
         audioEngine.stop()
         
-        XCTAssertTrue((audioEngine.audioEngine as! AVAudioEngineMock).AVAudioEngineStopWasCalled, "Should call stop in AVAudioEngine")
-        XCTAssertTrue((audioEngine.audioEngine as! AVAudioEngineMock).AVAudioEngineResetWasCalled, "Should call stop in AVAudioEngine")
+        XCTAssertTrue((audioEngine.audioEngine as! AVAudioEngineMock).stopWasCalled, "Should call stop in AVAudioEngine")
+        XCTAssertTrue((audioEngine.audioEngine as! AVAudioEngineMock).resetWasCalled, "Should call stop in AVAudioEngine")
     }
-
 }
