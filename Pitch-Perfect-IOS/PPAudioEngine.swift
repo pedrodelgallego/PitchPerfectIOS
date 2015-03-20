@@ -21,4 +21,13 @@ class PPAudioEngine:NSObject {
         audioEngine = AVAudioEngine()
         audioFile = AVAudioFile(forReading: recordedAudio.filePathUrl, error: nil)
     }
+    
+    func playAudioWithVariablePitch(pitch: Float){
+        println("play audion wiht pitch: ", pitch)
+    }
+    
+    func stop(){
+        audioEngine.stop()
+        audioEngine.reset()
+    }
 }

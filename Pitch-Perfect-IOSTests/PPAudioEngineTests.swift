@@ -29,5 +29,22 @@ class PPAudioEngineTests: XCTestCase {
         XCTAssertNotNil(audioEngine.audioFile, "After initializing it should have a audioFile")
         XCTAssertEqual(audioEngine.audioFile.url, filePathUrl,"the audio file should be the same that we pass to the recordedAudio")
     }
+    
+    func testStopShouldCallStopAndResetOnTheAVAudioEngine(){
+        class AVAudioEngineMock: AVAudioEngine {
+            var AVAudioEngineResetWasCalled:Bool = false
+            var AVAudioEngineStopWasCalled:Bool = false
+            
+            override func stop()  { AVAudioEngineStopWasCalled = true }
+            override func reset() { AVAudioEngineResetWasCalled = true }
+        }
+        
+        audioEngine = PPAudioEngine()
+        audioEngine.audioEngine = AVAudioEngineMock()
+        audioEngine.stop()
+        
+        XCTAssertTrue((audioEngine.audioEngine as! AVAudioEngineMock).AVAudioEngineStopWasCalled, "Should call stop in AVAudioEngine")
+        XCTAssertTrue((audioEngine.audioEngine as! AVAudioEngineMock).AVAudioEngineResetWasCalled, "Should call stop in AVAudioEngine")
+    }
 
 }

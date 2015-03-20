@@ -26,14 +26,14 @@ class PlaySoundsViewController: UIViewController {
     }
     
     @IBAction func playSoundChipmunk(sender: UIButton) {
-        println("play sound pitch +1000")
+        audioEngine.playAudioWithVariablePitch(1000)
     }
     
     @IBAction func playSoundDarthVader(sender: UIButton) {
-        println("play sound pitch -1000")
+        audioEngine.playAudioWithVariablePitch(-1000)
     }
     
     @IBAction func stopPlayingAudio(sender: UIButton) {
-        println("stop playing sound")
+        audioEngine.stop()
     }
 }
