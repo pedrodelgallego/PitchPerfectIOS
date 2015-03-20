@@ -18,5 +18,24 @@ class RecordAudioViewController: UIViewController {
 
     override func viewDidLoad() { super.viewDidLoad() }
 
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        recordingLabel.hidden = true
+        stopRecordingButton.hidden = true
+    }
+    
+    @IBAction func startRecordingAudio(sender: UIButton) {
+        recordingLabel.hidden = false
+        stopRecordingButton.hidden = false
+        startRecordingButton.enabled = false
+    }
+    
+    
+    @IBAction func stopRecordingAudio(sender: UIButton) {
+        recordingLabel.hidden = true
+        stopRecordingButton.hidden = true
+        startRecordingButton.enabled = true
+    }
+
 }
 

@@ -34,6 +34,20 @@
                ReferencedContainer = "container:Pitch-Perfect-IOS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D4C9BF731ABC5393001B2786"
+               BuildableName = "Controllers test.xctest"
+               BlueprintName = "Controllers test"
+               ReferencedContainer = "container:Pitch-Perfect-IOS.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -49,6 +63,16 @@
                BlueprintIdentifier = "D42064EC1ABC39E1004FEE70"
                BuildableName = "Pitch-Perfect-IOSTests.xctest"
                BlueprintName = "Pitch-Perfect-IOSTests"
+               ReferencedContainer = "container:Pitch-Perfect-IOS.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D4C9BF731ABC5393001B2786"
+               BuildableName = "Controllers test.xctest"
+               BlueprintName = "Controllers test"
                ReferencedContainer = "container:Pitch-Perfect-IOS.xcodeproj">
             </BuildableReference>
          </TestableReference>
