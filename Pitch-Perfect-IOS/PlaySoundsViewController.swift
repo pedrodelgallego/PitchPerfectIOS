@@ -36,4 +36,9 @@ class PlaySoundsViewController: UIViewController {
     @IBAction func stopPlayingAudio(sender: UIButton) {
         audioEngine.stop()
     }
+    
+    @IBAction func playSoundEcho(sender: UIButton) {
+        audioEngine.playAudioWithVariableEcho(50)
+    }
+    
 }

@@ -36,7 +36,15 @@ class PPAudioEngine:NSObject {
         playAudioWithEffect(effect)
     }
     
-    func playAudioWithEffect(effect: AVAudioUnitTimeEffect){
+    func playAudioWithVariableEcho(echo: Float){
+        stop()
+        var effect = AVAudioUnitReverb()
+        effect.loadFactoryPreset(AVAudioUnitReverbPreset.Cathedral)
+        effect.wetDryMix = echo
+        playAudioWithEffect(effect)
+    }
+    
+    func playAudioWithEffect(effect: AVAudioUnit){
         var audioPlayerNode = AVAudioPlayerNode()
         audioEngine.attachNode(audioPlayerNode)
         audioEngine.attachNode(effect)
