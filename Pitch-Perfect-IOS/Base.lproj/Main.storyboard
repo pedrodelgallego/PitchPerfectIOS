@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7525" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7516"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Record Audio View Controller-->
@@ -45,7 +46,7 @@
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="Xsg-1Q-cM3" secondAttribute="centerX" id="85J-p5-L3S"/>
                             <constraint firstAttribute="centerX" secondItem="Ayo-iN-xDE" secondAttribute="centerX" constant="-2" id="8rd-JX-VqT"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Ayo-iN-xDE" secondAttribute="bottom" constant="22" id="Zng-Ra-0A7"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Ayo-iN-xDE" secondAttribute="bottom" constant="30" id="Zng-Ra-0A7"/>
                             <constraint firstItem="Xsg-1Q-cM3" firstAttribute="top" secondItem="fJF-JK-gYB" secondAttribute="bottom" constant="18" id="f2E-fc-0Yo"/>
                             <constraint firstAttribute="centerX" secondItem="fJF-JK-gYB" secondAttribute="centerX" id="i1l-fO-mrH"/>
                             <constraint firstAttribute="centerY" secondItem="fJF-JK-gYB" secondAttribute="centerY" id="lh4-nE-b9x"/>
@@ -102,7 +103,105 @@
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cQc-Cw-L5t">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWR-aa-BdC">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="slow">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="40" y="74" width="100" height="100"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCH-Zu-CAG">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="fast">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4T9-RN-hnk">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="chipmunk">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="40" y="231" width="100" height="100"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="erW-Vq-auw">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="darthvader">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="254" y="231" width="100" height="100"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbO-hj-2p1">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="175" y="530" width="50" height="50"/>
+                                </variation>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.7764706015586853" green="0.88627451658248901" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="DWR-aa-BdC" firstAttribute="top" secondItem="5rg-Of-o5r" secondAttribute="bottom" constant="50" id="3KK-Zf-FQC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="erW-Vq-auw" secondAttribute="trailing" constant="30" id="5s2-Ex-pOP"/>
+                            <constraint firstAttribute="centerX" secondItem="RbO-hj-2p1" secondAttribute="centerX" id="8Az-Xv-fzk"/>
+                            <constraint firstItem="eCH-Zu-CAG" firstAttribute="top" secondItem="5rg-Of-o5r" secondAttribute="bottom" constant="50" id="9xG-of-eat"/>
+                            <constraint firstItem="3RX-zG-OVy" firstAttribute="top" secondItem="RbO-hj-2p1" secondAttribute="bottom" constant="30" id="DKV-D7-mlO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eCH-Zu-CAG" secondAttribute="trailing" constant="30" id="KnP-4M-pyu"/>
+                            <constraint firstItem="4T9-RN-hnk" firstAttribute="top" secondItem="DWR-aa-BdC" secondAttribute="bottom" constant="50" id="bt1-IQ-jzx"/>
+                            <constraint firstItem="4T9-RN-hnk" firstAttribute="leading" secondItem="cQc-Cw-L5t" secondAttribute="leadingMargin" constant="30" id="fhI-ge-Pal"/>
+                            <constraint firstItem="erW-Vq-auw" firstAttribute="top" secondItem="eCH-Zu-CAG" secondAttribute="bottom" constant="50" id="fpp-Xi-14l"/>
+                            <constraint firstItem="DWR-aa-BdC" firstAttribute="leading" secondItem="cQc-Cw-L5t" secondAttribute="leadingMargin" constant="30" id="hbg-CY-Iah"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="DWR-aa-BdC"/>
+                                <exclude reference="eCH-Zu-CAG"/>
+                                <exclude reference="4T9-RN-hnk"/>
+                                <exclude reference="erW-Vq-auw"/>
+                                <exclude reference="RbO-hj-2p1"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="3KK-Zf-FQC"/>
+                                <exclude reference="hbg-CY-Iah"/>
+                                <exclude reference="bt1-IQ-jzx"/>
+                                <exclude reference="fhI-ge-Pal"/>
+                                <exclude reference="9xG-of-eat"/>
+                                <exclude reference="KnP-4M-pyu"/>
+                                <exclude reference="5s2-Ex-pOP"/>
+                                <exclude reference="fpp-Xi-14l"/>
+                                <exclude reference="8Az-Xv-fzk"/>
+                                <exclude reference="DKV-D7-mlO"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="DWR-aa-BdC"/>
+                                <include reference="eCH-Zu-CAG"/>
+                                <include reference="4T9-RN-hnk"/>
+                                <include reference="erW-Vq-auw"/>
+                                <include reference="RbO-hj-2p1"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="3KK-Zf-FQC"/>
+                                <include reference="hbg-CY-Iah"/>
+                                <include reference="bt1-IQ-jzx"/>
+                                <include reference="fhI-ge-Pal"/>
+                                <include reference="9xG-of-eat"/>
+                                <include reference="KnP-4M-pyu"/>
+                                <include reference="5s2-Ex-pOP"/>
+                                <include reference="fpp-Xi-14l"/>
+                                <include reference="8Az-Xv-fzk"/>
+                                <include reference="DKV-D7-mlO"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="GSw-K9-KfY"/>
                 </viewController>
@@ -112,7 +211,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chipmunk" width="100" height="100"/>
+        <image name="darthvader" width="100" height="100"/>
+        <image name="fast" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
+        <image name="slow" width="100" height="100"/>
         <image name="stop" width="50" height="50"/>
     </resources>
 </document>

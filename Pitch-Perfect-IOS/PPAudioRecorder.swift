@@ -23,7 +23,6 @@ class PPAudioRecorder: AVAudioRecorder {
         let recordingName = formatter.stringFromDate(currentDateTime)+".wav"
         let pathArray = [dirPath, recordingName]
         let filePath = NSURL.fileURLWithPathComponents(pathArray)
-        println(filePath)
         
         // Start recording
         super.init(URL: filePath, settings: nil, error: nil)
