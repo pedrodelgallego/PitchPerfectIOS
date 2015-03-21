@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D4053C651ABDC9F900240582 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = D4053C641ABDC9F900240582 /* README.md */; };
+		D4053C671ABDCAE200240582 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = D4053C661ABDCAE200240582 /* README.md */; };
 		D42064DE1ABC39E0004FEE70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42064DD1ABC39E0004FEE70 /* AppDelegate.swift */; };
 		D42064E01ABC39E0004FEE70 /* RecordAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42064DF1ABC39E0004FEE70 /* RecordAudioViewController.swift */; };
 		D42064E31ABC39E0004FEE70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D42064E11ABC39E0004FEE70 /* Main.storyboard */; };
@@ -58,7 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D4053C641ABDC9F900240582 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D4053C661ABDCAE200240582 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D42064D81ABC39E0004FEE70 /* Pitch-Perfect-IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pitch-Perfect-IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D42064DC1ABC39E0004FEE70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D42064DD1ABC39E0004FEE70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +113,7 @@
 		D42064CF1ABC39E0004FEE70 = {
 			isa = PBXGroup;
 			children = (
+				D4053C661ABDCAE200240582 /* README.md */,
 				D4C9BF8C1ABC5962001B2786 /* AVFoundation.framework */,
 				D42064DA1ABC39E0004FEE70 /* Pitch-Perfect-IOS */,
 				D42064F01ABC39E1004FEE70 /* Pitch-Perfect-IOSTests */,
@@ -139,7 +140,6 @@
 				D45472701ABC79DC00D5FDE9 /* PlaySoundsViewController.swift */,
 				D42064DF1ABC39E0004FEE70 /* RecordAudioViewController.swift */,
 				D42064E11ABC39E0004FEE70 /* Main.storyboard */,
-				D4053C641ABDC9F900240582 /* README.md */,
 				D42064E41ABC39E0004FEE70 /* Images.xcassets */,
 				D42064E61ABC39E1004FEE70 /* LaunchScreen.xib */,
 				D42064DB1ABC39E0004FEE70 /* Supporting Files */,
@@ -343,7 +343,7 @@
 				D45472651ABC74A000D5FDE9 /* RecordedAudio.swift in Sources */,
 				D42064E01ABC39E0004FEE70 /* RecordAudioViewController.swift in Sources */,
 				D4C9BF891ABC592B001B2786 /* PPAudioRecorder.swift in Sources */,
-				D4053C651ABDC9F900240582 /* README.md in Sources */,
+				D4053C671ABDCAE200240582 /* README.md in Sources */,
 				D45472711ABC79DC00D5FDE9 /* PlaySoundsViewController.swift in Sources */,
 				D45472771ABCA06100D5FDE9 /* PPAudioEngine.swift in Sources */,
 				D42064DE1ABC39E0004FEE70 /* AppDelegate.swift in Sources */,
