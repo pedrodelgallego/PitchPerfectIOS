@@ -16,7 +16,9 @@ class RecordAudioViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet weak var recordingLabel: UILabel!
     @IBOutlet weak var startRecordingButton: UIButton!
     @IBOutlet weak var stopRecordingButton: UIButton!
-
+    @IBOutlet weak var pauseRecordingButton: UIButton!
+    @IBOutlet weak var resumeRecordingButton: UIButton!
+    
     override func viewDidLoad() { super.viewDidLoad() }
 
     override func viewWillAppear(animated: Bool) {
@@ -28,23 +30,39 @@ class RecordAudioViewController: UIViewController, AVAudioRecorderDelegate {
     @IBAction func startRecordingAudio(sender: UIButton) {
         recordingLabel.hidden = false
         stopRecordingButton.hidden = false
+        pauseRecordingButton.hidden = false
+        resumeRecordingButton.hidden = false
         startRecordingButton.enabled = false
+        
         startRecording()
     }
     
     func startRecording() {
         audioRecorder = PPAudioRecorder()
         audioRecorder.delegate = self
-        
+        recordingLabel.text = "Recording"
+
         var session = AVAudioSession.sharedInstance()
         session.setCategory(AVAudioSessionCategoryPlayAndRecord, error: nil)
 
         audioRecorder.record()
     }
     
+    @IBAction func pauseRecordingAudio(sender: UIButton) {
+        recordingLabel.text = "Paused"
+        audioRecorder.pause()
+    }
+    
+    @IBAction func resumeRecordingAudio(sender: UIButton) {
+        recordingLabel.text = "Recording"
+        audioRecorder.record()
+    }
+    
     @IBAction func stopRecordingAudio(sender: UIButton) {
         recordingLabel.hidden = true
         stopRecordingButton.hidden = true
+        pauseRecordingButton.hidden  = true
+        resumeRecordingButton.hidden = true
         startRecordingButton.enabled = true
     
         audioRecorder.stop()

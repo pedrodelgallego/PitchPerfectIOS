@@ -21,25 +21,31 @@ class RecordSoundViewControllerTest: XCTestCase {
     }
     
     func testStartRecordingAudioControllers(){
-        XCTAssertEqual(vc.stopRecordingButton.hidden, true, "The stop recording button should be hidden")
-        XCTAssertEqual(vc.recordingLabel.hidden, true, "The recording label should be hidden")
-        XCTAssertEqual(vc.startRecordingButton.enabled, true, "The recording button should be enabled")
+        XCTAssertTrue(vc.stopRecordingButton.hidden,   "The stop button should be hidden")
+        XCTAssertTrue(vc.pauseRecordingButton.hidden,  "The pause button should be hidden")
+        XCTAssertTrue(vc.resumeRecordingButton.hidden, "The resume button should be hidden")
+        XCTAssertTrue(vc.recordingLabel.hidden,        "The recording label should be hidden")
+        XCTAssertTrue(vc.startRecordingButton.enabled, "The recording button should be enabled")
         
         vc.startRecordingAudio(vc.startRecordingButton)
-        XCTAssertEqual(vc.stopRecordingButton.hidden, false, "The stop recording button should be visible")
-        XCTAssertEqual(vc.startRecordingButton.hidden, false, "The recording label should be visible")
-        XCTAssertEqual(vc.startRecordingButton.enabled, false, "The record button should be disabled")
+        XCTAssertFalse(vc.stopRecordingButton.hidden,   "The stop recording button should be visible")
+        XCTAssertFalse(vc.pauseRecordingButton.hidden,  "The pause button should be visible")
+        XCTAssertFalse(vc.resumeRecordingButton.hidden, "The resume button should be visible")
+        XCTAssertFalse(vc.startRecordingButton.hidden,  "The recording label should be visible")
+        XCTAssertFalse(vc.startRecordingButton.enabled, "The record button should be disabled")
     }
     
     func testStopRecordingAudioControllers(){
         vc.startRecordingAudio(vc.startRecordingButton)
-        XCTAssertEqual(vc.stopRecordingButton.hidden, false, "The stop recording button should be visible")
-        XCTAssertEqual(vc.startRecordingButton.hidden, false, "The recording label should be visible")
-        XCTAssertEqual(vc.startRecordingButton.enabled, false, "The record button should be disabled")
+        XCTAssertFalse(vc.stopRecordingButton.hidden,   "The stop recording button should be visible")
+        XCTAssertFalse(vc.startRecordingButton.hidden,  "The recording label should be visible")
+        XCTAssertFalse(vc.startRecordingButton.enabled, "The record button should be disabled")
         
         vc.stopRecordingAudio(vc.stopRecordingButton)
-        XCTAssertEqual(vc.stopRecordingButton.hidden, true, "The stop recording button should be hidden")
-        XCTAssertEqual(vc.recordingLabel.hidden, true, "The recording label should be hidden")
-        XCTAssertEqual(vc.startRecordingButton.enabled, true, "The recording button should be enabled")
+        XCTAssertTrue(vc.stopRecordingButton.hidden,   "The stop recording button should be hidden")
+        XCTAssertTrue(vc.recordingLabel.hidden,        "The recording label should be hidden")
+        XCTAssertTrue(vc.pauseRecordingButton.hidden,  "The pause button should be hidden")
+        XCTAssertTrue(vc.resumeRecordingButton.hidden, "The resume button should be hidden")
+        XCTAssertTrue(vc.startRecordingButton.enabled, "The recording button should be enabled")
     }
 }
