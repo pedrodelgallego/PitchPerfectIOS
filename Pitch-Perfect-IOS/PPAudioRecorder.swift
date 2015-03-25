@@ -9,7 +9,18 @@
 import Foundation
 import AVFoundation
 
+/// The PPAudioRecorder encapsulate the specific behavior of the 
+/// AVAudioRecorder in the Perfect Pitch application
 class PPAudioRecorder: AVAudioRecorder {
+    
+    /**
+        Initializes a new PPAudioRecorder with a url path to the file that
+        will contains the audio file.
+    
+        The name of the file will be NSBundle.url + ddMMyyyy-HHmmss.wav
+    
+        :returns: A new PPAudioRecorder
+    */
     override init() {
         // found path to store
         let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String

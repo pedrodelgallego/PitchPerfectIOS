@@ -18,19 +18,19 @@ class PlaySoundsViewController: UIViewController {
     }
     
     @IBAction func playSoundFast(sender: UIButton) {
-        audioEngine.playAudioWithVariableSpeed(2)
+        audioEngine.playAudioWithEffect(Effect.fastRate())
     }
     
     @IBAction func playSoundSlow(sender: UIButton) {
-        audioEngine.playAudioWithVariableSpeed(0.5)
+        audioEngine.playAudioWithEffect(Effect.slowRate())
     }
     
     @IBAction func playSoundChipmunk(sender: UIButton) {
-        audioEngine.playAudioWithVariablePitch(2400)
+        audioEngine.playAudioWithEffect(Effect.chipmunk())
     }
     
     @IBAction func playSoundDarthVader(sender: UIButton) {
-        audioEngine.playAudioWithVariablePitch(-2400)
+        audioEngine.playAudioWithEffect(Effect.darthVader())
     }
     
     @IBAction func stopPlayingAudio(sender: UIButton) {
@@ -38,7 +38,7 @@ class PlaySoundsViewController: UIViewController {
     }
     
     @IBAction func playSoundEcho(sender: UIButton) {
-        audioEngine.playAudioWithVariableEcho(50)
+        audioEngine.playAudioWithEffect(Effect.reverb())
     }
     
 }

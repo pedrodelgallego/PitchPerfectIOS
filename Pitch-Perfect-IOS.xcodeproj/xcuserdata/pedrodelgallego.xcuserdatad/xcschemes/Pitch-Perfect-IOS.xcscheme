@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D42064D71ABC39E0004FEE70"
-               BuildableName = "Pitch-Perfect-IOS.app"
-               BlueprintName = "Pitch-Perfect-IOS"
+               BuildableName = "PitchPerfectIOS.app"
+               BlueprintName = "PitchPerfectIOS"
                ReferencedContainer = "container:Pitch-Perfect-IOS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -81,8 +81,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D42064D71ABC39E0004FEE70"
-            BuildableName = "Pitch-Perfect-IOS.app"
-            BlueprintName = "Pitch-Perfect-IOS"
+            BuildableName = "PitchPerfectIOS.app"
+            BlueprintName = "PitchPerfectIOS"
             ReferencedContainer = "container:Pitch-Perfect-IOS.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -101,8 +101,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D42064D71ABC39E0004FEE70"
-            BuildableName = "Pitch-Perfect-IOS.app"
-            BlueprintName = "Pitch-Perfect-IOS"
+            BuildableName = "PitchPerfectIOS.app"
+            BlueprintName = "PitchPerfectIOS"
             ReferencedContainer = "container:Pitch-Perfect-IOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -120,8 +120,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D42064D71ABC39E0004FEE70"
-            BuildableName = "Pitch-Perfect-IOS.app"
-            BlueprintName = "Pitch-Perfect-IOS"
+            BuildableName = "PitchPerfectIOS.app"
+            BlueprintName = "PitchPerfectIOS"
             ReferencedContainer = "container:Pitch-Perfect-IOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

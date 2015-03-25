@@ -64,7 +64,7 @@ class RecordAudioViewController: UIViewController, AVAudioRecorderDelegate {
         pauseRecordingButton.hidden  = true
         resumeRecordingButton.hidden = true
         startRecordingButton.enabled = true
-    
+        
         audioRecorder.stop()
         var audioSession = AVAudioSession.sharedInstance()
         audioSession.setActive(false, error: nil)
