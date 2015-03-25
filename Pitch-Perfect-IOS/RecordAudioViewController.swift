@@ -19,7 +19,9 @@ class RecordAudioViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet weak var pauseRecordingButton: UIButton!
     @IBOutlet weak var resumeRecordingButton: UIButton!
     
-    override func viewDidLoad() { super.viewDidLoad() }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
