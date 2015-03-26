@@ -6,9 +6,9 @@ Tasks
 
 - [X] Remove legacy code
 
-- [ ] Fix the bug in sound effect
+- [X] Fix the bug in sound effect
 
-- [ ] Enhance UI Design
+- [X] Enhance UI Design
 
 - [X] Add Resume and Pause Button 
 
