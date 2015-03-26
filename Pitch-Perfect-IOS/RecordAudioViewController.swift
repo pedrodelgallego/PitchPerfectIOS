@@ -69,7 +69,7 @@ class RecordAudioViewController: UIViewController, AVAudioRecorderDelegate {
     // MARK: Recording functions
     
     /// Creates an new audioRecorder, initialize a new shareSession
-    /// and start recording use the audioRecorder
+    /// and start recording using the audioRecorder
     func startRecording() {
         audioRecorder = PPAudioRecorder()
         audioRecorder.delegate = self

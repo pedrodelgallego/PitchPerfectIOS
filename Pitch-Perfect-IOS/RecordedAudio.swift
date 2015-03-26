@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Store the information about the current audio file
 class RecordedAudio: NSObject {
     var title: String!
     var filePathUrl: NSURL!

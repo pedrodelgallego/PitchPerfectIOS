@@ -27,7 +27,7 @@
                         <constraint firstAttribute="height" constant="66" id="uit-Mt-Lx5"/>
                     </constraints>
                     <items>
-                        <navigationItem id="eHw-hJ-hfO"/>
+                        <navigationItem title="Pitch Perfect" id="eHw-hJ-hfO"/>
                     </items>
                     <variation key="default">
                         <mask key="constraints">
