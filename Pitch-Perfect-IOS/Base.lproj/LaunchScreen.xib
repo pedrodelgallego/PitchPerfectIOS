@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6214" systemVersion="14A314h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7525" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6207"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7516"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -11,30 +10,72 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Copyright (c) 2015 Pedro Del Gallego. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="8ie-xW-0ye">
-                    <rect key="frame" x="20" y="439" width="441" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pitch-Perfect-IOS" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
-                    <rect key="frame" x="20" y="140" width="441" height="43"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yia-L3-F2K">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <items>
+                        <navigationItem title="Pitch Perfect" id="wKu-Kh-KXF"/>
+                    </items>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="44"/>
+                    </variation>
+                </navigationBar>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sf2-jT-6nL">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="64" id="QV4-X7-TqK"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="66" id="S85-uk-Ce9"/>
+                        <constraint firstAttribute="height" constant="66" id="uit-Mt-Lx5"/>
+                    </constraints>
+                    <items>
+                        <navigationItem id="eHw-hJ-hfO"/>
+                    </items>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="QV4-X7-TqK"/>
+                            <exclude reference="S85-uk-Ce9"/>
+                            <exclude reference="uit-Mt-Lx5"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact" misplaced="YES">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="44"/>
+                        <mask key="constraints">
+                            <include reference="QV4-X7-TqK"/>
+                            <include reference="S85-uk-Ce9"/>
+                            <include reference="uit-Mt-Lx5"/>
+                        </mask>
+                    </variation>
+                </navigationBar>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.7764706015586853" green="0.88627451658248901" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="bottom" multiplier="1/3" constant="1" id="5cJ-9S-tgC"/>
-                <constraint firstAttribute="centerX" secondItem="kId-c2-rCX" secondAttribute="centerX" id="Koa-jz-hwk"/>
-                <constraint firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" constant="20" id="Kzo-t9-V3l"/>
-                <constraint firstItem="8ie-xW-0ye" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="MfP-vx-nX0"/>
-                <constraint firstAttribute="centerX" secondItem="8ie-xW-0ye" secondAttribute="centerX" id="ZEH-qu-HZ9"/>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="fvb-Df-36g"/>
+                <constraint firstItem="sf2-jT-6nL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="GHu-NA-6pR"/>
+                <constraint firstAttribute="trailing" secondItem="sf2-jT-6nL" secondAttribute="trailing" id="war-T2-5d4"/>
+                <constraint firstItem="sf2-jT-6nL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="zdg-Hb-roD"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="Yia-L3-F2K"/>
+                    <exclude reference="sf2-jT-6nL"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="GHu-NA-6pR"/>
+                    <exclude reference="war-T2-5d4"/>
+                    <exclude reference="zdg-Hb-roD"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="subviews">
+                    <include reference="Yia-L3-F2K"/>
+                    <include reference="sf2-jT-6nL"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="GHu-NA-6pR"/>
+                    <include reference="war-T2-5d4"/>
+                    <include reference="zdg-Hb-roD"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="548" y="455"/>
         </view>
     </objects>
