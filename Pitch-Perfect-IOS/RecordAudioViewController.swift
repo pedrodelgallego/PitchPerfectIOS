@@ -23,31 +23,17 @@ class RecordAudioViewController: UIViewController, AVAudioRecorderDelegate {
         super.viewDidLoad()
     }
 
+    /// Everytime the users go to the record page, the page should
+    /// be ready to start recording again
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        recordingLabel.hidden = true
-        stopRecordingButton.hidden = true
+        setRecordingStatus(false)
     }
-    
+
+    // MARK: User Actions
     @IBAction func startRecordingAudio(sender: UIButton) {
-        recordingLabel.hidden = false
-        stopRecordingButton.hidden = false
-        pauseRecordingButton.hidden = false
-        resumeRecordingButton.hidden = false
-        startRecordingButton.enabled = false
-        
+        setRecordingStatus(true)
         startRecording()
-    }
-    
-    func startRecording() {
-        audioRecorder = PPAudioRecorder()
-        audioRecorder.delegate = self
-        recordingLabel.text = "Recording"
-
-        var session = AVAudioSession.sharedInstance()
-        session.setCategory(AVAudioSessionCategoryPlayAndRecord, error: nil)
-
-        audioRecorder.record()
     }
     
     @IBAction func pauseRecordingAudio(sender: UIButton) {
@@ -61,28 +47,54 @@ class RecordAudioViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     @IBAction func stopRecordingAudio(sender: UIButton) {
-        recordingLabel.hidden = true
-        stopRecordingButton.hidden = true
-        pauseRecordingButton.hidden  = true
-        resumeRecordingButton.hidden = true
-        startRecordingButton.enabled = true
-        
+        setRecordingStatus(false)
         audioRecorder.stop()
         var audioSession = AVAudioSession.sharedInstance()
         audioSession.setActive(false, error: nil)
     }
     
+    
+    // MARK: UI component status
+    
+    /// Set the UI components according to the recording status
+    /// display/hide the specific elementes of the UI
+    func setRecordingStatus(isRecording: Bool){
+        recordingLabel.hidden = !isRecording
+        stopRecordingButton.hidden = !isRecording
+        pauseRecordingButton.hidden = !isRecording
+        resumeRecordingButton.hidden = !isRecording
+        startRecordingButton.enabled = !isRecording
+    }
+   
+    // MARK: Recording functions
+    
+    /// Creates an new audioRecorder, initialize a new shareSession
+    /// and start recording use the audioRecorder
+    func startRecording() {
+        audioRecorder = PPAudioRecorder()
+        audioRecorder.delegate = self
+        recordingLabel.text = "Recording"
+        
+        var session = AVAudioSession.sharedInstance()
+        session.setCategory(AVAudioSessionCategoryPlayAndRecord, error: nil)
+        
+        audioRecorder.record()
+    }
+    
+    /// Waits for the audioRecorder to finish recording, if the recording was successful, then 
+    /// creates a new recordAudio and activage the segue. Otherwise
+    /// logs the error, and restore the UI components
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder!, successfully flag: Bool) {
         if (flag){
             recordedAudio = RecordedAudio(title: recorder.url.lastPathComponent!, filePathUrl: recorder.url)
             self.performSegueWithIdentifier("stopRecording", sender: recordedAudio)
         } else {
             println("Recording was not succesful")
-            startRecordingButton.enabled = true
-            stopRecordingButton.hidden = true
+            setRecordingStatus(false)
         }
     }
 
+    /// Initialize the recordAudio property in the next PlaySoundsViewController
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "stopRecording"){
             let playSoundsViewController:PlaySoundsViewController = segue.destinationViewController as! PlaySoundsViewController

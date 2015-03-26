@@ -10,6 +10,6 @@ Tasks
 
 - [ ] Enhance UI Design
 
-- [ ] Add Resume and Pause Button 
+- [X] Add Resume and Pause Button 
 
 - [X] Echo Effect
