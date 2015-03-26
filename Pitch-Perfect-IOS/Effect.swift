@@ -9,8 +9,16 @@
 import Foundation
 import AVFoundation
 
+/**
+    A singleton class that encapsulate the logic to create specific effects for 
+    Pitch Perfect
+
+    Each static method generates an AVAudioUnit effect that can be consume by the 
+    PPAudioEngine
+**/
 class Effect: NSObject {
 
+    /// MARK: Effect Builders
     class func variableSpeedRateEffect(rate: Float) -> AVAudioUnitVarispeed {
         let effect: AVAudioUnitVarispeed = AVAudioUnitVarispeed()
         effect.rate = rate
@@ -30,6 +38,7 @@ class Effect: NSObject {
         return effect
     }
     
+    /// MARK: Built-in effects
     class func slowRate() -> AVAudioUnitVarispeed {
         return variableSpeedRateEffect(0.5)
     }

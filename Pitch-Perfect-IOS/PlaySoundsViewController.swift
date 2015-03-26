@@ -17,6 +17,7 @@ class PlaySoundsViewController: UIViewController {
         audioEngine = PPAudioEngine(recordedAudio: recordedAudio)
     }
     
+    /// MARK: User actions
     @IBAction func playSoundFast(sender: UIButton) {
         audioEngine.playAudioWithEffect(Effect.fastRate())
     }
@@ -40,5 +41,4 @@ class PlaySoundsViewController: UIViewController {
     @IBAction func playSoundEcho(sender: UIButton) {
         audioEngine.playAudioWithEffect(Effect.reverb())
     }
-    
 }
