@@ -260,7 +260,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSa-I8-ytp">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="fast">
+                                <state key="normal" image="echo">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -342,6 +342,7 @@
     <resources>
         <image name="chipmunk" width="100" height="100"/>
         <image name="darthvader" width="100" height="100"/>
+        <image name="echo" width="100" height="100"/>
         <image name="fast" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
         <image name="pause" width="100" height="100"/>
